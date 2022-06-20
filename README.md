@@ -1,7 +1,7 @@
-#Most Active Cookies
+# Most Active Cookies
 Active cookie is a command line tool to process cookies file and return the most active cookie for the specified date.
 
-##Example
+## Example
 Given a cookie log file in the following format:
 
 ~~~
@@ -24,7 +24,7 @@ It will write the following to the STD_OUT
 AtY0laUfhglK3lC7
 ~~~
 
-##Assumptions
+## Assumptions
 - If multiple cookies meet that criteria, it returns all of them on separate lines.
 - -d parameter is assumed to be in UTC time zone.
 - Csv File is only large enough that it will fully fit into memory.
@@ -48,11 +48,11 @@ mvn clean package
 - Run the compiled jar file:
 
 ~~~
-java -jar target\cookie-filter-${version}.jar -f csv-file-path -d target-date
+java -jar active-cookie-${version}.jar -f csv-file-path -d target-date
 ~~~
 
 - Example:
 
 ~~~
-java -jar target\cookie-filter-1.0.0.jar -f cookie_log.csv -d 2018-12-09
+java -jar active-cookie-1.0.0.jar -f cookie_log.csv -d 2018-12-09
 ~~~
